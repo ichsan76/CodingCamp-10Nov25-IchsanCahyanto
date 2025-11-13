@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+
+    <!-- Progress Bar -->
+    <div class="progress-section">
+      <div class="stats">
+        <div><strong>Total:</strong> <span id="totalCount">0</span></div>
+        <div><strong>Completed:</strong> <span id="doneCount">0</span></div>
+        <div><strong>Pending:</strong> <span id="pendingCount">0</span></div>
+        <div><strong>Progress:</strong> <span id="progressPercent">0%</span></div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+
+    <!-- Input Form -->
+    <form id="todoForm">
+      <input type="text" id="todoInput" placeholder="Enter your task..." />
+      <input type="date" id="dateInput" />
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <select id="statusFilter">
+        <option value="all">All</option>
+        <option value="done">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+      <button id="deleteAll" class="danger">Delete All</button>
+    </div>
+
+    <!-- To-Do Table -->
+    <table id="todoTable">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>List</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="todoBody"></tbody>
+    </table>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made by <span>Ichsan Cahyanto</span></p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
